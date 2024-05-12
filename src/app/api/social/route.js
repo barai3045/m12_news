@@ -6,7 +6,7 @@ export async function GET(req, res){
         const prisma = new PrismaClient();
         const result = await prisma.socials.findMany()
 
-        return NextResponse.json({status:"status", data:result})
+        return NextResponse.json({status:"success", data:result})
     } catch(e){
         return NextResponse.json({status:'fail', data:e.toString()})
     }
